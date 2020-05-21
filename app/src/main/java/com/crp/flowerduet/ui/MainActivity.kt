@@ -54,7 +54,10 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext, "Work Done", Toast.LENGTH_SHORT).show()
 
                 if (hasReadPermissions()) {
-                    setImages()
+                    try {
+                        setImages()
+                    } catch (e: Exception) {
+                    }
                 }
 
             } else {
